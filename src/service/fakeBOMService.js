@@ -4368,7 +4368,7 @@ export function getProcessedBomElements() {
             // build parent node
             parentNode = {
                 id: element["ParentKey"],
-                description: element["ParentDescription"],
+                description: element["id"] + ":::" + element["ParentDescription"],
                 children: []
             }
             seen.set(parentKey, parentNode);
@@ -4382,7 +4382,7 @@ export function getProcessedBomElements() {
             // build child node
             childNode = {
                 id: element["ChildKey"],
-                description: element["ChildDescription"],
+                description: element["Child"] + ":::" + element["ChildDescription"] + ":::" + element["AsslyQty"],
                 quantity: element["AsslyQty"],
                 children: []
             };
@@ -4396,5 +4396,5 @@ export function getProcessedBomElements() {
     for(let key of seen.keys()) {
         procesedElements.push(seen.get(key))
     }
-    return procesedElements;
+    return procesedElements.slice(0,1);
 }
