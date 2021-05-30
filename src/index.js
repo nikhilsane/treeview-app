@@ -10,7 +10,10 @@ import { getProcessedBomElements } from './service/fakeBOMService';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Tree nodes={getProcessedBomElements()} sortBy="id" sortDirection="asc"/>
+    <Tree 
+    nodes={getProcessedBomElements()} 
+    sortBy="id" 
+    sortDirection="asc"/>
   </React.StrictMode>,
   document.getElementById('root')
 );

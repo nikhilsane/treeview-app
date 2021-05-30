@@ -96,7 +96,8 @@ class Tree extends Component {
                         description={node.description} 
                         children={node.children} 
                         isExpanded={node.isExpanded} 
-                        level={node.level}/>
+                        level={node.level}
+                        quantity={node.quantity}/>
                     )
                 }
             </ul> 

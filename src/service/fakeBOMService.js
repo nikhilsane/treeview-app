@@ -4382,7 +4382,7 @@ export function getProcessedBomElements() {
             // build child node
             childNode = {
                 id: element["ChildKey"],
-                description: element["Child"] + ":::" + element["ChildDescription"] + ":::" + element["AsslyQty"],
+                description: element["Child"] + ":::" + element["ChildDescription"],// + ":::" + element["AsslyQty"],
                 quantity: element["AsslyQty"],
                 children: []
             };
