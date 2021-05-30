@@ -5,15 +5,12 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import Tree from './components/tree';
 import { getProcessedBomElements } from './service/fakeBOMService';
+import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Tree 
-    nodes={getProcessedBomElements()} 
-    sortBy="id" 
-    sortDirection="asc"/>
+    <App nodes={getProcessedBomElements()}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
